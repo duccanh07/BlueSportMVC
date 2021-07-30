@@ -1,0 +1,94 @@
+.listproduct {
+    column-gap: 10px;
+    display: grid;
+    grid-auto-rows: minmax(min-content,max-content);
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    row-gap: 30px;
+    padding: 0 10px;
+}
+.listproduct .item {
+    background-color: transparent;
+}
+.listproduct .item-wrap {
+    position: relative;
+}
+.listproduct .item-img {
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    height: 214px;
+    overflow: hidden;
+}
+.listproduct .item-img img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+.listproduct .item-label {
+    font-size: 0;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+}
+.listproduct .item-label span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 1px 4px;
+}
+.listproduct .item-label .lb-percent {
+    background-color: #EB402A;
+    color: #FFF;
+}
+.listproduct .item-label .lb-tragop {
+    background-color: #DFDFDF;
+    color: #555;
+}
+.listproduct h3 {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+.listproduct h3 span {
+    font-weight: bold;
+}
+.listproduct .item-gift {
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.listproduct .price {
+    margin-top: 5px;
+}
+.listproduct .price-current {
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.listproduct .price-old {
+    color: #444;
+    font-size: 13px;
+    text-decoration-line: line-through;
+}
+.listproduct .item-color {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+.listproduct .item-color-img {
+    border: 1px solid #FFF;
+    height: 30px;
+    margin-right: 8px;
+    width: 30px;
+}
+.listproduct .item-color-img:last-child {
+    margin-right: 0;
+}
+.listproduct .item-color-img.active {
+    border: 1px solid #243A76;
+}
+.listproduct .item-color img {
+    width: 100%;
+}

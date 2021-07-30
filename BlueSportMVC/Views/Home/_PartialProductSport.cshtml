@@ -1,0 +1,47 @@
+﻿@model List<BlueSportMVC.Models.ProductModel>
+
+<div class="listproduct listproduct-block">
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <a href="#">
+                <div class="item-wrap">
+                    <div class="item-label">
+                        <span class="lb-percent">-@item.Percent%</span>
+                        <span class="lb-tragop">Góp @item.Installment%</span>
+                    </div>
+                    <div class="item-img">
+                        <img src="@item.ImageUrl" alt="@item.ImageName">
+                    </div>
+                </div>
+                <h3 class="fInter"><span>@item.NameBrand</span>  @item.NameProduct </h3>
+                <div class="price">
+                    <p class="price-current">@item.PriceCurrent</p>
+                    <p class="price-old">@item.PriceOld</p>
+                </div>
+            </a>
+            @if (item.ListImage != null)
+            {
+                <div class="item-color">
+                    @foreach (var active in item.ListImage)
+                    {
+                        if (active.ActiveImage)
+                        {
+                            <a href="javascript:void(0)" class="item-color-img active">
+                                <img src="@active.ImageUrl" alt="@active.ImageName">
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="javascript:void(0)" class="item-color-img">
+                                <img src="@active.ImageUrl" alt="@active.ImageName">
+                            </a>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+s

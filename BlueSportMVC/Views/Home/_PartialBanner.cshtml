@@ -1,0 +1,14 @@
+﻿@model List<BlueSportMVC.Models.BannerModel>
+
+@if (Model != null)
+{
+    <!-- Banner common -->
+        <div class="slider-banner owl-carousel">
+            @foreach (var item in Model)
+            {
+               <img src="@item.ImageUrl" alt="@item.ImageTitle">
+       
+            }
+        </div>
+    <!-- / Banner common -->
+}

@@ -1,0 +1,313 @@
+.fotorama__arr, .fotorama__fullscreen-icon {
+    background-image:url(../images/icon_common@2x.png);
+    background-repeat: no-repeat;
+    background-size: 300px 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fotorama__fullscreen-icon,
+.fotorama--fullscreen .fotorama__fullscreen-icon {
+    background-position: -235px -110px;
+    bottom: 8px;
+    height: 40px;
+    left: 8px;
+    right: auto;
+    top: auto;
+    width: 40px;
+}
+.fotorama__arr {
+    height: 13px;
+    width: 24px;
+}
+.fotorama__arr--prev {
+    background-position: -45px -140px;
+    left: 15px;
+}
+.fotorama__arr--next {
+    background-position: -45px -160px;
+    right: 15px;
+}
+.fotorama__thumb-border {
+    border: 1px solid #1D41A6;
+    background: transparent;
+}
+.fotorama--fullscreen, .fullscreen,
+.fotorama--fullscreen .fotorama__nav,
+.fotorama--fullscreen .fotorama__stage {
+    background: #FFF;
+}
+.fotorama .count {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    bottom: 15px;
+    color: #FFF;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    line-height: 17px;
+    position: absolute;
+    padding: 3px 7px;
+    right: 10px;
+}
+
+
+.detail-title {
+    margin: 15px 10px 0;
+}
+.detail-title h3 {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 21px;
+}
+.detail-title h3 span {
+    font-weight: bold;
+}
+.detail-title .status {
+    color: #219653;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 5px;
+}
+
+.detail-price {
+    margin: 10px 10px 0;
+}
+.detail-price span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.price-current {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 23px;
+    margin-right: 6px;
+}
+.price-old {
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 6px;
+    text-decoration-line: line-through;
+}
+.price-percent {
+    background: linear-gradient(76.97deg, #DA1C05 -0.49%, #FF4A33 109.1%);
+    color: #FFF;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 1px 4px;
+}
+
+.select-color {
+    margin: 15px 10px 0;
+}
+.select-color-ttl {
+    font-size: 14px;
+    line-height: 17px;
+}
+.select-color-ttl span {
+    font-weight: bold;
+}
+.select-color ul {
+    display: flex;
+    margin-top: 8px;
+}
+.select-color ul li {
+    border: 1px solid #DFDFDF;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+.select-color ul li.act {
+    border: 1px solid #1D41A6;
+}
+.select-color ul li img {
+    width: 100%;
+}
+.select-color ul li:last-child {
+    margin-right: 0;
+}
+
+
+.select-size {
+    margin: 15px 10px 0;
+}
+.select-size .size-top {
+    display: flex;
+    justify-content: space-between;
+}
+.size-top-left {
+    font-size: 14px;
+    line-height: 20px;
+}
+.size-top-left span {
+    font-weight: bold;
+}
+.size-top-right {
+    color: #243A76;
+    font-size: 14px;
+    line-height: 17px;
+}
+.select-size .size-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.select-size .size-list li {
+    padding: 1px 1px;
+    background-color: #F6F8FA;
+    font-size: 16px;
+    line-height: 26px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    padding: 3px 0;
+    text-align: center;
+    width: 50px;
+}
+.select-size .size-list li.active {
+    background-color: #222;
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+.box-promo {
+    background-color: #FAFAFA;
+    border: 1px solid #DFDFDF;
+    margin: 10px 10px 0;
+    padding: 12px 10px;
+    position: relative;
+}
+.box-promo-list {
+    height: 205px;
+    overflow: hidden;
+}
+.box-promo-txt, .box-promo-list li {
+    font-size: 14px;
+    line-height: 20px;
+}
+.box-promo-txt span,
+.box-promo-list li span {
+    font-weight: bold;
+}
+.box-promo-list li {
+    margin-top: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+.box-promo-list li::before {
+    background-color: #222;
+    border-radius: 50%;
+    content: '';
+    height: 6px;
+    left: 6px;
+    position: absolute;
+    top: 7px;
+    width: 6px;
+}
+.box-promo-list li a {
+    color: #1D41A6;
+}
+.box-promo-btn {
+    color: #1D41A6;
+    display: block;
+    text-align: center;
+}
+.box-promo-btn span {
+    position: relative;
+    padding-right: 12px;
+}
+.box-promo-btn span::before {
+    border-right: 1px solid #1D41A6;
+    border-bottom: 1px solid #1D41A6;
+    content: '';
+    height: 6px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    transform: rotate(45deg);
+    width: 6px;
+}
+.box-promo .bg-hide {
+    background: linear-gradient(to bottom,rgba(255 255 255/0),rgba(255 255 255/.95),rgba(255 255 255/1));
+    bottom: 0;
+    height: 110px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+.detail-btn {
+    display: flex;
+    margin: 10px 6px 0;
+}
+.detail-btn .btn {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 2px;
+    padding: 13px 0;
+    text-align: center;
+    width: calc(50% - 4px);
+}
+.detail-btn .btn-addcart {
+    background-color: #222;
+    color: #FFF;
+}
+.detail-btn .btn-spmarket {
+    background-color: #FFF;
+    border: 1px solid #222;
+    color: #222;
+}
+
+
+.highlights {
+    margin: 25px 10px 0;
+}
+.highlights p {
+    font-weight: bold;
+    line-height: 17px;
+}
+.highlights ul {
+    margin-top: 15px;
+}
+.highlights ul li {
+    line-height: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+.highlights ul li::before {
+    background-color: #222;
+    border-radius: 50%;
+    content: '';
+    height: 4px;
+    left: 6px;
+    position: absolute;
+    top: 11px;
+    width: 4px;
+}
+
+.policy {
+    border-top: 1px solid #DFDFDF;
+    margin-top: 10px;
+    padding: 10px;
+}
+.policy li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.policy li .iconl {
+    text-align: center;
+    width: 25px;
+}
+.policy li p {
+    padding-left: 10px;
+    width: calc(100% - 25px);
+}
+.policy li p a {
+    color: #1D41A6;
+    font-weight: bold;
+}

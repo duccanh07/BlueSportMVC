@@ -1,0 +1,181 @@
+﻿@model BlueSportMVC.ViewModels.vmHome
+
+<section>
+    @Html.Partial("~/Views/Home/_PartialBanner.cshtml", Model.lsBanner)
+
+    <!-- Hot deal PROMO -->
+    <div class="promo">
+        <h2 class="ptomo__ttl">HOT DEAL HÔM NAY</h2>
+        <ul class="common-tab">
+            <li class="active">TẤT CẢ</li>
+            <li>XE ĐẠP</li>
+            <li>CHẠY BỘ</li>
+            <li>DỤNG CỤ</li>
+            <li>XE ĐẠP</li>
+            <li>CHẠY BỘ</li>
+        </ul>
+
+        <!--Product-->
+        @Html.Partial("~/Views/Home/_PartialProductAll.cshtml", Model.lsProductAll)
+    </div>
+
+    <!-- / Hot deal PROMO -->
+    <!-- Thể thao nam -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner01.png" alt="Thể thao nam">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul> 
+        
+        <!--List Product Male-->
+        @Html.Partial("~/Views/Home/_PartialProductMale.cshtml", Model.lsProductMale)
+        <!--/ List Product Female-->
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ GIÀY DÉP NAM</span>
+        </a>
+    </div>
+    <!-- / Thể thao nam -->
+
+    <!-- Thể thao nữ -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner02.png" alt="Thể thao nữ">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Female-->
+        @Html.Partial("~/Views/Home/_PartialProductFemale.cshtml", Model.lsProductFemale)
+        <!--/ List Product Female-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ ÁO - QUẦN NỮ</span>
+        </a>
+    </div>
+    <!-- / Thể thao nữ -->
+    <!-- Thể thao trẻ em -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner03.png" alt="Thể thao trẻ em">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Children-->
+        @Html.Partial("~/Views/Home/_PartialProductChildren.cshtml", Model.lsProductChildren)
+        <!--/ List Product Children-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ GIÀY DÉP TRẺ EM</span>
+        </a>
+    </div>
+    <!-- / Thể thao trẻ em -->
+    <!-- Xe đạp -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner04.png" alt="Xe đạp">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+        <!--List Product Bicycle-->
+        @Html.Partial("~/Views/Home/_PartialProductBicycle.cshtml", Model.lsProductBicycle)
+        <!--/ List Product Bicycle-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ XE ĐẠP NỔI BẬT</span>
+        </a>
+    </div>
+    <!-- / Xe đạp -->
+    <!-- Các môn thể thao -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner05.png" alt="Các môn thể thao">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Bicycle-->
+        @Html.Partial("~/Views/Home/_PartialProductSport.cshtml", Model.lsProductSport)
+        <!--/ List Product Bicycle-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ CÁC SẢN PHẨM CHẠY BỘ</span>
+        </a>
+    </div>
+    <!-- / Các môn thể thao -->
+
+    <div class="trademark">
+        <h2 class="trademark__ttl fRoboto">XEM SẢN PHẨM <br>CÁC THƯƠNG HIỆU NỔI TIẾNG</h2>
+        <div class="trademark__list owl-carousel">
+            <div class="item">
+                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
+                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
+                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
+                <p><img src="./images/img_thuonghieu04.png" alt="thuong hieu" width="76" height="28"></p>
+                <p><img src="./images/img_thuonghieu05.png" alt="thuong hieu" width="58" height="29"></p>
+                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
+            </div>
+            <div class="item">
+                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
+                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
+                <p><img src="./images/img_thuonghieu05.png" alt="thuong hieu" width="58" height="29"></p>
+                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
+                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
+                <p><img src="./images/img_thuonghieu04.png" alt="thuong hieu" width="76" height="28"></p>
+            </div>
+            <div class="item">
+                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
+                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
+                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
+                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
+            </div>
+        </div>
+        <div class="trademark__post owl-carousel">
+            <a href="#" class="post-item">
+                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
+                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
+            </a>
+            <a href="#" class="post-item">
+                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
+                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
+            </a>
+            <a href="#" class="post-item">
+                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
+                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!--Visit-->
+    @Html.Partial("~/Views/Home/_PartialVisit.cshtml",Model.lsVisit)
+    <!--Commitment-->
+    @Html.Partial("~/Views/Home/Commitment.cshtml")
+</section>
+
+
