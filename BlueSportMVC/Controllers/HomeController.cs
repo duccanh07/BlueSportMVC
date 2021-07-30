@@ -28,6 +28,10 @@ namespace BlueSportMVC.Controllers
 
                 lsProductSport = GetProductsSport(),
 
+                lsBrand = GetBrands(),
+
+                lsBannerFooter = GetBannersFooter(),
+
                 lsVisit = GetVisits(),
             };
             return View("~/Views/Home/Index.cshtml", vm);
@@ -1055,6 +1059,136 @@ namespace BlueSportMVC.Controllers
 
             return data;
         }
+        private List<BlueSportMVC.Models.ListBrandModel> GetBrands()
+        {
+            var data = new List<Models.ListBrandModel>();
+            data.Add(new Models.ListBrandModel()
+            {
+                BrandModel = new List<BrandModel>()
+                        {
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu01.png",
+                                ImageName = "thuong hieu",
+                                width = 68,
+                                height = 38
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu02.png",
+                                ImageName = "thuong hieu",
+                                width = 62,
+                                height = 37
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu03.png",
+                                ImageName = "thuong hieu",
+                                width = 76,
+                                height = 28
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu04.png",
+                                ImageName = "thuong hieu",
+                                width = 58,
+                                height = 29
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu05.png",
+                                ImageName = "thuong hieu",
+                                width = 65,
+                                height = 18
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu06.png",
+                                ImageName = "thuong hieu",
+                                width = 66,
+                                height = 44
+                            },
+                        }
+            });
+            data.Add(new Models.ListBrandModel()
+            {
+                BrandModel = new List<BrandModel>()
+                        {
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu02.png",
+                                ImageName = "thuong hieu",
+                                width = 68,
+                                height = 38
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu03.png",
+                                ImageName = "thuong hieu",
+                                width = 62,
+                                height = 37
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu01.png",
+                                ImageName = "thuong hieu",
+                                width = 76,
+                                height = 28
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu06.png",
+                                ImageName = "thuong hieu",
+                                width = 58,
+                                height = 29
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu05.png",
+                                ImageName = "thuong hieu",
+                                width = 65,
+                                height = 18
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu04.png",
+                                ImageName = "thuong hieu",
+                                width = 66,
+                                height = 44
+                            },
+                        }
+            });
+            data.Add(new Models.ListBrandModel()
+            {
+                BrandModel = new List<BrandModel>()
+                        {
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu01.png",
+                                ImageName = "thuong hieu",
+                                width = 68,
+                                height = 38
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu05.png",
+                                ImageName = "thuong hieu",
+                                width = 62,
+                                height = 37
+                            },
+                            new BrandModel
+                            {
+                                ImageUrl = "./images/img_thuonghieu04.png",
+                                ImageName = "thuong hieu",
+                                width = 76,
+                                height = 28
+                            },
+                         
+                        }
+            });
+
+            return data;
+        }
         private List<BlueSportMVC.Models.VisitModel> GetVisits()
         {
             var data = new List<Models.VisitModel>();
@@ -1094,6 +1228,64 @@ namespace BlueSportMVC.Controllers
                 Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
             });
 
+            return data;
+        }
+
+
+        private List<BlueSportMVC.Models.BannerModel> GetBannersFooter()
+        {
+            // to do call api 
+
+            //var data = new List<BlueSportMVC.Models.BannerModel>();
+
+
+            #region Get Data DTO => API
+            //var client = new RestClient("http://172.16.2.198:2060/apibanner/getbannerbysite?siteID=2&categoryID=0&placeID=1535");
+            //client.Timeout = -1;
+            //var request = new RestRequest(Method.GET);
+            //IRestResponse response = client.Execute(request);
+            //Console.WriteLine(response.Content);
+            //var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.BannerDTO>>(response.Content);
+            #endregion
+
+            #region Mapping Data DTO => Model 
+
+            //foreach (var item in dataDto)
+            //{
+            //    data.Add(new Models.BannerModel()
+            //    {
+            //        ImageUrl = item.DmxContent,
+            //        Name = item.Description,
+            //        //idxyz = item.BannerID
+            //    });
+            //}
+
+            #endregion
+
+            #region Data
+            //return data;
+            #endregion
+
+
+            var data = new List<Models.BannerModel>();
+            data.Add(new Models.BannerModel()
+            {
+                ImageUrl = "./images/img_trademark.jpeg",
+                ImageTitle = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình",
+                Title = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình"
+            });
+            data.Add(new Models.BannerModel()
+            {
+                ImageUrl = "./images/img_trademark.jpeg",
+                ImageTitle = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình",
+                Title = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình"
+            });
+            data.Add(new Models.BannerModel()
+            {
+                ImageUrl = "./images/img_trademark.jpeg",
+                ImageTitle = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình",
+                Title = "Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình"
+            });
             return data;
         }
 

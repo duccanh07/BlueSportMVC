@@ -130,44 +130,13 @@
 
     <div class="trademark">
         <h2 class="trademark__ttl fRoboto">XEM SẢN PHẨM <br>CÁC THƯƠNG HIỆU NỔI TIẾNG</h2>
-        <div class="trademark__list owl-carousel">
-            <div class="item">
-                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
-                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
-                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
-                <p><img src="./images/img_thuonghieu04.png" alt="thuong hieu" width="76" height="28"></p>
-                <p><img src="./images/img_thuonghieu05.png" alt="thuong hieu" width="58" height="29"></p>
-                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
-            </div>
-            <div class="item">
-                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
-                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
-                <p><img src="./images/img_thuonghieu05.png" alt="thuong hieu" width="58" height="29"></p>
-                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
-                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
-                <p><img src="./images/img_thuonghieu04.png" alt="thuong hieu" width="76" height="28"></p>
-            </div>
-            <div class="item">
-                <p><img src="./images/img_thuonghieu01.png" alt="thuong hieu" width="66" height="44"></p>
-                <p><img src="./images/img_thuonghieu02.png" alt="thuong hieu" width="68" height="38"></p>
-                <p><img src="./images/img_thuonghieu03.png" alt="thuong hieu" width="62" height="37"></p>
-                <p><img src="./images/img_thuonghieu06.png" alt="thuong hieu" width="65" height="18"></p>
-            </div>
-        </div>
-        <div class="trademark__post owl-carousel">
-            <a href="#" class="post-item">
-                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
-                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
-            </a>
-            <a href="#" class="post-item">
-                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
-                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
-            </a>
-            <a href="#" class="post-item">
-                <img src="./images/img_trademark.jpeg" alt="Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình">
-                <p>Không gian trẻ trung, hiện đại tư vấn chuyên nghiệp, tận tình</p>
-            </a>
-        </div>
+        <!--List Brand-->
+        @Html.Partial("~/Views/Home/_PartialBrand.cshtml", Model.lsBrand)
+        <!--/ List Brand-->
+        <!--List Brand-->
+        @Html.Partial("~/Views/Home/_PartialBannerFooter.cshtml", Model.lsBannerFooter)
+        <!--/ List Brand-->
+
     </div>
 
 

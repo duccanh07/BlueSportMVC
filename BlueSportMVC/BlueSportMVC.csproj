@@ -126,6 +126,8 @@
     </Compile>
     <Compile Include="ModelsDTO\BannerDTO.cs" />
     <Compile Include="Models\BannerModel.cs" />
+    <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\ListBrandModel.cs" />
     <Compile Include="Models\ListImageModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\VisitModel.cs" />
@@ -230,6 +232,8 @@
     <Content Include="Views\Home\_PartialProductChildren.cshtml" />
     <Content Include="Views\Home\_PartialProductBicycle.cshtml" />
     <Content Include="Views\Home\_PartialProductSport.cshtml" />
+    <Content Include="Views\Home\_PartialBrand.cshtml" />
+    <Content Include="Views\Home\_PartialBannerFooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
