@@ -156,3 +156,5 @@ D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.CoreCompileIn
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.CopyComplete
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.pdb
+D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.dll
+D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.xml

@@ -1,5 +1,6 @@
 ﻿using BlueSportMVC.Models;
 using BlueSportMVC.ViewModels;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,54 +44,52 @@ namespace BlueSportMVC.Controllers
         {
             // to do call api 
 
-            //var data = new List<BlueSportMVC.Models.BannerModel>();
+            var data = new List<BlueSportMVC.Models.BannerModel>();
 
 
             #region Get Data DTO => API
-            //var client = new RestClient("http://172.16.2.198:2060/apibanner/getbannerbysite?siteID=2&categoryID=0&placeID=1535");
-            //client.Timeout = -1;
-            //var request = new RestRequest(Method.GET);
-            //IRestResponse response = client.Execute(request);
-            //Console.WriteLine(response.Content);
-            //var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.BannerDTO>>(response.Content);
+            var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/banner");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+            var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.BannerDTO>>(response.Content);
             #endregion
 
             #region Mapping Data DTO => Model 
 
-            //foreach (var item in dataDto)
-            //{
-            //    data.Add(new Models.BannerModel()
-            //    {
-            //        ImageUrl = item.DmxContent,
-            //        Name = item.Description,
-            //        //idxyz = item.BannerID
-            //    });
-            //}
-
+            foreach (var item in dataDto)
+            {
+                data.Add(new Models.BannerModel()
+                {
+                    ImageUrl = item.pathImg,
+                    ImageTitle = item.altImg,
+                });
+            }
             #endregion
 
             #region Data
-            //return data;
+            return data;
             #endregion
 
 
-            var data = new List<Models.BannerModel>();
-                data.Add(new Models.BannerModel()
-                {
-                    ImageUrl = "./images/banner.jpeg",
-                    ImageTitle = "Thể thao nam"
-                });
-                data.Add(new Models.BannerModel()
-                {
-                    ImageUrl = "./images/banner.jpeg",
-                    ImageTitle = "Thể thao nam"
-                });
-                data.Add(new Models.BannerModel()
-                {
-                    ImageUrl = "./images/banner.jpeg",
-                    ImageTitle = "Thể thao nam"
-                });
-                return data;
+            //var data = new List<Models.BannerModel>();
+            //    data.Add(new Models.BannerModel()
+            //    {
+            //        ImageUrl = "./images/banner.jpeg",
+            //        ImageTitle = "Thể thao nam"
+            //    });
+            //    data.Add(new Models.BannerModel()
+            //    {
+            //        ImageUrl = "./images/banner.jpeg",
+            //        ImageTitle = "Thể thao nam"
+            //    });
+            //    data.Add(new Models.BannerModel()
+            //    {
+            //        ImageUrl = "./images/banner.jpeg",
+            //        ImageTitle = "Thể thao nam"
+            //    });
+            //    return data;
         }
 
         private List<BlueSportMVC.Models.ProductModel> GetProductsAll()
