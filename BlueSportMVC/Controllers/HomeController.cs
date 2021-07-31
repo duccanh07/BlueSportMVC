@@ -94,7 +94,65 @@ namespace BlueSportMVC.Controllers
 
         private List<BlueSportMVC.Models.ProductModel> GetProductsAll()
         {
-            var data = new List<Models.ProductModel>();
+            // to do call api 
+
+            var data = new List<BlueSportMVC.Models.ProductModel>();
+
+
+            #region Get Data DTO => API
+            var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/product");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+            var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.ProductDTO>>(response.Content);
+            #endregion
+
+            #region Mapping Data DTO => Model 
+
+            foreach (var item in dataDto)
+            {
+                data.Add(new Models.ProductModel()
+                {
+                    NameProduct = item.name,
+                    NameBrand = item.brandName,
+                    ImageUrl = item.image,
+                    ImageName = item.imageName,
+                    PriceCurrent = item.priceCurrent,
+                    PriceOld = item.priceOld,
+                    Percent = item.saleOff,
+                    Installment = item.installment,
+                    ListImage = new List<ListImageModel>()
+                        {
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = true
+
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color03.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            }
+                        }
+                });
+            }
+            #endregion
+
+            #region Data
+            return data;
+            #endregion
+
+            /*var data = new List<Models.ProductModel>();
             data.Add(new Models.ProductModel()
             {
                 NameProduct = "Adizero Takumi Sen 7 Tokyo",
@@ -228,49 +286,40 @@ namespace BlueSportMVC.Controllers
                             }
                         }
             });
-
-
-            return data;
+            return data;*/
         }
 
         private List<BlueSportMVC.Models.ProductModel> GetProductsMale()
         {
-            var data = new List<Models.ProductModel>();
-            data.Add(new Models.ProductModel()
+            // to do call api 
+
+            var data = new List<BlueSportMVC.Models.ProductModel>();
+
+
+            #region Get Data DTO => API
+            var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/product");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+            var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.ProductDTO>>(response.Content);
+            #endregion
+
+            #region Mapping Data DTO => Model 
+
+            foreach (var item in dataDto)
             {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img01.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-               
-            });
-            data.Add(new Models.ProductModel()
-            {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img02.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-               
-            });
-            data.Add(new Models.ProductModel()
-            {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img02.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-                ListImage = new List<ListImageModel>()
+                data.Add(new Models.ProductModel()
+                {
+                    NameProduct = item.name,
+                    NameBrand = item.brandName,
+                    ImageUrl = item.image,
+                    ImageName = item.imageName,
+                    PriceCurrent = item.priceCurrent,
+                    PriceOld = item.priceOld,
+                    Percent = item.saleOff,
+                    Installment = item.installment,
+                    ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
                             {
@@ -292,110 +341,175 @@ namespace BlueSportMVC.Controllers
                                 ActiveImage = false
                             }
                         }
+                });
+            }
+            #endregion
 
-            });
-            data.Add(new Models.ProductModel()
-            {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img01.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-                ListImage = new List<ListImageModel>()
-                        {
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = true
-
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color03.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            }
-                        }
-            });
-
-            data.Add(new Models.ProductModel()
-            {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img02.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-                ListImage = new List<ListImageModel>()
-                        {
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = true
-
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color03.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            }
-                        }
-
-            });
-            data.Add(new Models.ProductModel()
-            {
-                NameProduct = "Adizero Takumi Sen 7 Tokyo",
-                NameBrand = "ADIDAS",
-                ImageUrl = "./images/img01.png",
-                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
-                PriceCurrent = "6.964.000",
-                PriceOld = "8.205.000",
-                Percent = "20",
-                Installment = "Góp 0",
-                ListImage = new List<ListImageModel>()
-                        {
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = true
-
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color03.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            }
-                        }
-            });
+            #region Data
             return data;
+            #endregion
+
+            /*var data = new List<Models.ProductModel>();
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img01.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+               
+            });
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img02.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+               
+            });
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img02.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+                ListImage = new List<ListImageModel>()
+                        {
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = true
+
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color03.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            }
+                        }
+
+            });
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img01.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+                ListImage = new List<ListImageModel>()
+                        {
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = true
+
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color03.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            }
+                        }
+            });
+
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img02.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+                ListImage = new List<ListImageModel>()
+                        {
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = true
+
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color03.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            }
+                        }
+
+            });
+            data.Add(new Models.ProductModel()
+            {
+                NameProduct = "Adizero Takumi Sen 7 Tokyo",
+                NameBrand = "ADIDAS",
+                ImageUrl = "./images/img01.png",
+                ImageName = "ADIDAS Adizero Takumi Sen 7 Tokyo",
+                PriceCurrent = "6.964.000",
+                PriceOld = "8.205.000",
+                Percent = "20",
+                Installment = "Góp 0",
+                ListImage = new List<ListImageModel>()
+                        {
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = true
+
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color02.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            },
+                            new ListImageModel
+                            {
+                                ImageUrl = "./images/img-color03.png",
+                                ImageName = "test",
+                                ActiveImage = false
+                            }
+                        }
+            });
+            return data;*/
         }
 
         private List<BlueSportMVC.Models.ProductModel> GetProductsFemale()
@@ -563,7 +677,6 @@ namespace BlueSportMVC.Controllers
 
             return data;
         }
-
         private List<BlueSportMVC.Models.ProductModel> GetProductsChildren()
         {
             var data = new List<Models.ProductModel>();
@@ -729,7 +842,6 @@ namespace BlueSportMVC.Controllers
 
             return data;
         }
-
         private List<BlueSportMVC.Models.ProductModel> GetProductsBicycle()
         {
             var data = new List<Models.ProductModel>();
@@ -1194,72 +1306,72 @@ namespace BlueSportMVC.Controllers
         {
             // to do call api 
 
-            //var data = new List<BlueSportMVC.Models.VisitModel>();
+            var data = new List<BlueSportMVC.Models.VisitModel>();
 
 
-            //#region Get Data DTO => API
-            //var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/store");
-            //client.Timeout = -1;
-            //var request = new RestRequest(Method.GET);
-            //IRestResponse response = client.Execute(request);
-            //Console.WriteLine(response.Content);
-            //var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.StoreDTO>>(response.Content);
-            //#endregion
+            #region Get Data DTO => API
+            var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/store");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+            var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.StoreDTO>>(response.Content);
+            #endregion
 
-            //#region Mapping Data DTO => Model 
+            #region Mapping Data DTO => Model 
 
-            //foreach (var item in dataDto)
-            //{
-            //    data.Add(new Models.VisitModel()
-            //    {
-            //        NameVisit = item.name,
-            //        Address = item.address,
-            //    });
-            //}
-            //#endregion
+            foreach (var item in dataDto)
+            {
+                data.Add(new Models.VisitModel()
+                {
+                    NameVisit = item.name,
+                    Address = item.address,
+                });
+            }
+            #endregion
 
-            //#region Data
-            //return data;
-            //#endregion
-
-            var data = new List<Models.VisitModel>();
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport hàng xanh",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 1",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 2",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 3",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 4",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 5",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-            data.Add(new Models.VisitModel()
-            {
-                NameVisit = "Bluesport Quận 6",
-                Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
-            });
-
+            #region Data
             return data;
+            #endregion
+
+            //var data = new List<Models.VisitModel>();
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport hàng xanh",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 1",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 2",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 3",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 4",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 5",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+            //data.Add(new Models.VisitModel()
+            //{
+            //    NameVisit = "Bluesport Quận 6",
+            //    Address = "294 Xô Viết nghệ Tĩnh, P.21, Q.Bình Thạnh, TP.Hồ Chí Minh",
+            //});
+
+            //return data;
         }
         private List<BlueSportMVC.Models.CommitmentModel> GetCommitments()
         {

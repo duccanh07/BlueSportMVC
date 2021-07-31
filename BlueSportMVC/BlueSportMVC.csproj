@@ -128,6 +128,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ModelsDTO\BannerDTO.cs" />
+    <Compile Include="ModelsDTO\ProductDTO.cs" />
     <Compile Include="ModelsDTO\StoreDTO.cs" />
     <Compile Include="Models\BannerModel.cs" />
     <Compile Include="Models\BrandModel.cs" />
