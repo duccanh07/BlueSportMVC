@@ -1,5 +1,6 @@
 ﻿@model BlueSportMVC.ViewModels.vmHome
 
+
 <section>
     @Html.Partial("~/Views/Home/_PartialBanner.cshtml", Model.lsBanner)
 
@@ -30,8 +31,8 @@
             <li><a href="#">GIÀY DÉP</a></li>
             <li><a href="#">ÁO - QUẦN</a></li>
             <li><a href="#">DỤNG CỤ</a></li>
-        </ul> 
-        
+        </ul>
+
         <!--List Product Male-->
         @Html.Partial("~/Views/Home/_PartialProductMale.cshtml", Model.lsProductMale)
         <!--/ List Product Female-->
@@ -40,7 +41,6 @@
         </a>
     </div>
     <!-- / Thể thao nam -->
-
     <!-- Thể thao nữ -->
     <div class="block">
         <div class="block__banner">
@@ -139,12 +139,10 @@
 
     </div>
 
-
-
     <!--Visit-->
-    @Html.Partial("~/Views/Home/_PartialVisit.cshtml",Model.lsVisit)
+    @Html.Partial("~/Views/Home/_PartialVisit.cshtml", Model.lsVisit)
     <!--Commitment-->
-    @Html.Partial("~/Views/Home/Commitment.cshtml")
+    @Html.Partial("~/Views/Home/_PartialCommitment.cshtml", Model.lsCommitment)
+    
 </section>
-
 

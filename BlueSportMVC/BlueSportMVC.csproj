@@ -127,6 +127,7 @@
     <Compile Include="ModelsDTO\BannerDTO.cs" />
     <Compile Include="Models\BannerModel.cs" />
     <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\CommitmentModel.cs" />
     <Compile Include="Models\ListBrandModel.cs" />
     <Compile Include="Models\ListImageModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
@@ -224,7 +225,7 @@
     <Content Include="Views\Home\_PartialBanner.cshtml" />
     <Content Include="Views\Shared\Common\_PartialHeader.cshtml" />
     <Content Include="Views\Shared\Common\_PartialFooter.cshtml" />
-    <Content Include="Views\Home\Commitment.cshtml" />
+    <Content Include="Views\Home\_PartialCommitment.cshtml" />
     <Content Include="Views\Home\_PartialVisit.cshtml" />
     <Content Include="Views\Home\_PartialProductMale.cshtml" />
     <Content Include="Views\Home\_PartialProductAll.cshtml" />

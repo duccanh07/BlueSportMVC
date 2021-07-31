@@ -1,0 +1,31 @@
+﻿@model List<BlueSportMVC.Models.CommitmentModel>
+
+<div class="commitment">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @if (item.Icon != null)
+                {
+                    <div class="li-icon">
+                        <i class="@item.Icon"></i>
+                    </div>
+                }
+                @if (item.TextIcon != null)
+                {
+                    <div class="li-icon">
+                        @item.TextIcon
+                    </div>
+                }
+                <div class="li-content">
+                    <p class="txt-ttl">@item.Title</p>
+                    <p class="txt-ct fInter">@item.Detail</p>
+                    @if (item.PathText != null)
+                    {
+                        <a href="@item.PathUrl" class="txt-link fInter">@item.PathText</a>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+</div>
