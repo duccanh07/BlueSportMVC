@@ -16,5 +16,6 @@ namespace BlueSportMVC.ModelsDTO
         public string brandName { get; set; }
         public string imageName { get; set; }
         public string installment { get; set; }
+        public string imageBrand { get; set; }
     }
 }
