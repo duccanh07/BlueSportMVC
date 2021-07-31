@@ -309,23 +309,12 @@ namespace BlueSportMVC.Controllers
                         {
                             new ListImageModel
                             {
-                                ImageUrl = "./images/img-color02.png",
+                                ImageUrl = item.imageBrand,
                                 ImageName = "test",
                                 ActiveImage = true
 
                             },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color02.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            },
-                            new ListImageModel
-                            {
-                                ImageUrl = "./images/img-color03.png",
-                                ImageName = "test",
-                                ActiveImage = false
-                            }
+
                         }
                 });
             }
