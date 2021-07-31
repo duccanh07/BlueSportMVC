@@ -1192,6 +1192,36 @@ namespace BlueSportMVC.Controllers
         }
         private List<BlueSportMVC.Models.VisitModel> GetVisits()
         {
+            // to do call api 
+
+            //var data = new List<BlueSportMVC.Models.VisitModel>();
+
+
+            //#region Get Data DTO => API
+            //var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/store");
+            //client.Timeout = -1;
+            //var request = new RestRequest(Method.GET);
+            //IRestResponse response = client.Execute(request);
+            //Console.WriteLine(response.Content);
+            //var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.StoreDTO>>(response.Content);
+            //#endregion
+
+            //#region Mapping Data DTO => Model 
+
+            //foreach (var item in dataDto)
+            //{
+            //    data.Add(new Models.VisitModel()
+            //    {
+            //        NameVisit = item.name,
+            //        Address = item.address,
+            //    });
+            //}
+            //#endregion
+
+            //#region Data
+            //return data;
+            //#endregion
+
             var data = new List<Models.VisitModel>();
             data.Add(new Models.VisitModel()
             {
@@ -1271,26 +1301,25 @@ namespace BlueSportMVC.Controllers
 
 
             #region Get Data DTO => API
-            //var client = new RestClient("http://172.16.2.198:2060/apibanner/getbannerbysite?siteID=2&categoryID=0&placeID=1535");
+            //var client = new RestClient("https://virtserver.swaggerhub.com/duccanh07/BlueSport-MWG/1.0.0/banner");
             //client.Timeout = -1;
             //var request = new RestRequest(Method.GET);
             //IRestResponse response = client.Execute(request);
             //Console.WriteLine(response.Content);
             //var dataDto = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ModelsDTO.BannerDTO>>(response.Content);
-            #endregion
+            //#endregion
 
-            #region Mapping Data DTO => Model 
+            //#region Mapping Data DTO => Model 
 
             //foreach (var item in dataDto)
             //{
             //    data.Add(new Models.BannerModel()
             //    {
-            //        ImageUrl = item.DmxContent,
-            //        Name = item.Description,
-            //        //idxyz = item.BannerID
+            //        ImageUrl = item.pathImg,
+            //        ImageTitle = item.altImg,
+            //        Title = item.description,
             //    });
             //}
-
             #endregion
 
             #region Data

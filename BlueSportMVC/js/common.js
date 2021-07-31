@@ -23,17 +23,24 @@ $(document).ready(function() {
     }
   }
 
+
+  //search show
   $('.header-search').click(function() {
-    $('.search-show').addClass('current');
-    $('body').css({"overflow": "hidden"});
+    $('body').addClass('body-search');
+    $('.bgcover').fadeIn(300);
+    $('.search-show').fadeIn(300);
+    $(this).fadeOut(300);
   });
-  $('.close-showsearch').click(function() {
-    $('.search-show').removeClass('current');
-    $('body').css({"overflow": "scroll"});
+  $('.search-close').click(function() {
+    $('body').removeClass('body-search');
+    $('.bgcover').fadeOut(300);
+    $('.search-show').fadeOut(300);
+    $('.header-search').fadeIn(300);
   });
-  $('.clear-icon').click(function() {
-    $(this).prev('.search-form input').val('');
+  $('.clear-search').click(function() {
+    $(this).prev('.search-top input').val('');
   });
+
 
 
   //Footer
