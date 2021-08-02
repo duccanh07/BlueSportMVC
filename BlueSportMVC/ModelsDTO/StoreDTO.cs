@@ -18,8 +18,8 @@ namespace BlueSportMVC.ModelsDTO
         {
             return new StoreModel()
             {
-                name = storeDto.name,
-                address = storeDto.GetAddress(),
+                NameStore = storeDto.name,
+                Address = storeDto.GetAddress(),
             };
         }
 

@@ -9,7 +9,6 @@ namespace BlueSportMVC.Models
     {
         public string ImageUrl { get; set; }
         public string ImageTitle { get; set; }
-
         public string Title { get; set; }
     }
 }

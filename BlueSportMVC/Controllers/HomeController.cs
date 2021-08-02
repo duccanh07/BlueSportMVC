@@ -58,19 +58,15 @@ namespace BlueSportMVC.Controllers
             #endregion
 
             #region Mapping Data DTO => Model 
-
+            List<BannerModel> bannerModel = new List<BannerModel>();
             foreach (var item in dataDto)
             {
-                data.Add(new Models.BannerModel()
-                {
-                    ImageUrl = item.pathImg,
-                    ImageTitle = item.altImg,
-                });
+                bannerModel.Add(item.ToGetBanner());
             }
             #endregion
 
             #region Data
-            return data;
+            return bannerModel;
             #endregion
 
 
@@ -110,26 +106,15 @@ namespace BlueSportMVC.Controllers
             #endregion
 
             #region Mapping Data DTO => Model 
-
+            List<ProductModel> productModels = new List<ProductModel>();
             foreach (var item in dataDto)
             {
-                data.Add(new Models.ProductModel()
-                {
-                    NameProduct = item.name,
-                    NameBrand = item.brandName,
-                    ImageUrl = item.image,
-                    ImageName = item.imageName,
-                    PriceCurrent = item.priceCurrent,
-                    PriceOld = item.priceOld,
-                    Percent = item.saleOff,
-                    Installment = item.installment,
-               
-                });
+                productModels.Add(item.ToGetProduct());
             }
             #endregion
 
             #region Data
-            return data;
+            return productModels;
             #endregion
 
             /*var data = new List<Models.ProductModel>();
@@ -286,25 +271,15 @@ namespace BlueSportMVC.Controllers
             #endregion
 
             #region Mapping Data DTO => Model 
-
+            List<ProductModel> productModels = new List<ProductModel>();
             foreach (var item in dataDto)
             {
-                data.Add(new Models.ProductModel()
-                {
-                    NameProduct = item.name,
-                    NameBrand = item.brandName,
-                    ImageUrl = item.image,
-                    ImageName = item.imageName,
-                    PriceCurrent = item.priceCurrent,
-                    PriceOld = item.priceOld,
-                    Percent = item.saleOff,
-                    Installment = item.installment,
-                });
+                productModels.Add(item.ToGetProduct());
             }
             #endregion
 
             #region Data
-            return data;
+            return productModels;
             #endregion
 
             /*var data = new List<Models.ProductModel>();
@@ -1264,7 +1239,7 @@ namespace BlueSportMVC.Controllers
         {
             // to do call api 
 
-            var data = new List<BlueSportMVC.Models.VisitModel>();
+            var data = new List<BlueSportMVC.Models.StoreModel>();
 
 
             #region Get Data DTO => API

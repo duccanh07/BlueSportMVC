@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BlueSportMVC.Models;
 
 namespace BlueSportMVC.ModelsDTO
 {
@@ -18,4 +19,24 @@ namespace BlueSportMVC.ModelsDTO
         public string installment { get; set; }
         public string imageBrand { get; set; }
     }
+
+    public static class ProductDTOExt
+    {
+        public static ProductModel ToGetProduct(this ProductDTO productDto)
+        {
+            return new ProductModel
+            {
+                NameProduct = productDto.name,
+                ImageUrl = productDto.image,
+                PriceCurrent = productDto.priceCurrent,
+                PriceOld = productDto.priceOld,
+                Installment = productDto.installment,
+                NameBrand = productDto.brandName,
+                ImageName = productDto.imageName,
+                Percent = productDto.saleOff
+            };
+        }
+    }
+
+
 }
