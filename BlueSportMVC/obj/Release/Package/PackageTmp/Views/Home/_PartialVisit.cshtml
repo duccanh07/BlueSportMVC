@@ -1,0 +1,35 @@
+﻿@model List<BlueSportMVC.Models.VisitModel>
+
+
+@if (Model != null)
+{
+    <div class="visit">
+        <h2 class="visit__title fRoboto">GHÉ THĂM BLUESPORT</h2>
+        <p class="txt">Hiện mở bán 4 siêu thị tại TP. Hồ Chí Minh</p>
+        <div class="visit-checkbox">
+            <span></span>
+            <p>Tìm siêu thị gần bạn</p>
+        </div>
+        <div class="visit__list">
+
+            @foreach (var item in Model)
+            {
+                <a href="#" class="item">
+                    <p class="txt-name">@item.NameVisit</p>
+                    <div class="txt-address">
+                        <p>
+                            @item.Address
+                        </p>
+                        <span><i class="icon-visitmap"></i></span>
+                    </div>
+                </a>
+
+            }
+
+        </div>
+        <a href="javascript:void(0)" class="visit-btn">
+            <span>XEM THÊM 9 SIÊU THỊ</span>
+        </a>
+    </div>
+}
+

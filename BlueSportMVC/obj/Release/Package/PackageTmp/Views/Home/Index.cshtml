@@ -1,0 +1,148 @@
+﻿@model BlueSportMVC.ViewModels.vmHome
+
+
+<section>
+    @Html.Partial("~/Views/Home/_PartialBanner.cshtml", Model.lsBanner)
+
+    <!-- Hot deal PROMO -->
+    <div class="promo">
+        <h2 class="promo__ttl fRoboto">HOT DEAL HÔM NAY</h2>
+        <ul class="common-tab">
+            <li class="active"><a href="#">TẤT CẢ</a></li>
+            <li><a href="#">XE ĐẠP</a></li>
+            <li><a href="#">CHẠY BỘ</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+            <li><a href="#">XE ĐẠP</a></li>
+            <li><a href="#">CHẠY BỘ</a></li>
+        </ul>
+
+        <!--Product-->
+        @Html.Partial("~/Views/Home/_PartialProductAll.cshtml", Model.lsProductAll)
+    </div>
+
+    <!-- / Hot deal PROMO -->
+    <!-- Thể thao nam -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner01.png" alt="Thể thao nam">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Male-->
+        @Html.Partial("~/Views/Home/_PartialProductMale.cshtml", Model.lsProductMale)
+        <!--/ List Product Female-->
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ GIÀY DÉP NAM</span>
+        </a>
+    </div>
+    <!-- / Thể thao nam -->
+    <!-- Thể thao nữ -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner02.png" alt="Thể thao nữ">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Female-->
+        @Html.Partial("~/Views/Home/_PartialProductFemale.cshtml", Model.lsProductFemale)
+        <!--/ List Product Female-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ ÁO - QUẦN NỮ</span>
+        </a>
+    </div>
+    <!-- / Thể thao nữ -->
+    <!-- Thể thao trẻ em -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner03.png" alt="Thể thao trẻ em">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Children-->
+        @Html.Partial("~/Views/Home/_PartialProductChildren.cshtml", Model.lsProductChildren)
+        <!--/ List Product Children-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ GIÀY DÉP TRẺ EM</span>
+        </a>
+    </div>
+    <!-- / Thể thao trẻ em -->
+    <!-- Xe đạp -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner04.png" alt="Xe đạp">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+        <!--List Product Bicycle-->
+        @Html.Partial("~/Views/Home/_PartialProductBicycle.cshtml", Model.lsProductBicycle)
+        <!--/ List Product Bicycle-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ XE ĐẠP NỔI BẬT</span>
+        </a>
+    </div>
+    <!-- / Xe đạp -->
+    <!-- Các môn thể thao -->
+    <div class="block">
+        <div class="block__banner">
+            <img src="./images/block_banner05.png" alt="Các môn thể thao">
+        </div>
+        <ul class="common-tab">
+            <li class="active"><a href="#">NỔI BẬT</a></li>
+            <li><a href="#">GIÀY DÉP</a></li>
+            <li><a href="#">ÁO - QUẦN</a></li>
+            <li><a href="#">DỤNG CỤ</a></li>
+        </ul>
+
+        <!--List Product Bicycle-->
+        @Html.Partial("~/Views/Home/_PartialProductSport.cshtml", Model.lsProductSport)
+        <!--/ List Product Bicycle-->
+
+        <a href="#" class="c-btn c-btn-black">
+            <span>XEM TẤT CẢ CÁC SẢN PHẨM CHẠY BỘ</span>
+        </a>
+    </div>
+    <!-- / Các môn thể thao -->
+
+    <div class="trademark">
+        <h2 class="trademark__ttl fRoboto">XEM SẢN PHẨM <br>CÁC THƯƠNG HIỆU NỔI TIẾNG</h2>
+        <!--List Brand-->
+        @Html.Partial("~/Views/Home/_PartialBrand.cshtml", Model.lsBrand)
+        <!--/ List Brand-->
+        <!--List Brand-->
+        @Html.Partial("~/Views/Home/_PartialBannerFooter.cshtml", Model.lsBannerFooter)
+        <!--/ List Brand-->
+
+    </div>
+
+    <!--Visit-->
+    @Html.Partial("~/Views/Home/_PartialVisit.cshtml", Model.lsVisit)
+    <!--Commitment-->
+    @Html.Partial("~/Views/Home/_PartialCommitment.cshtml", Model.lsCommitment)
+    
+</section>
+

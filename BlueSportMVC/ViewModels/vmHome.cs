@@ -10,7 +10,7 @@ namespace BlueSportMVC.ViewModels
     {
 
         public List<BannerModel> lsBanner { get; internal set; }
-        public List<VisitModel> lsVisit { get; set; }
+        public List<StoreModel> lsStore { get; set; }
         public List<ProductModel> lsProductAll { get; set; }
         public List<ProductModel> lsProductMale { get; set; }
         public List<ProductModel> lsProductFemale { get; set; }

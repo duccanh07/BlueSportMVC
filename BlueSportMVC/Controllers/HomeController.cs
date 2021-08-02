@@ -1,4 +1,5 @@
 ﻿using BlueSportMVC.Models;
+using BlueSportMVC.ModelsDTO;
 using BlueSportMVC.ViewModels;
 using RestSharp;
 using System;
@@ -33,7 +34,7 @@ namespace BlueSportMVC.Controllers
 
                 lsBannerFooter = GetBannersFooter(),
 
-                lsVisit = GetVisits(),
+                lsStore = GetStores(),
 
                 lsCommitment = GetCommitments()
             };
@@ -122,14 +123,7 @@ namespace BlueSportMVC.Controllers
                     PriceOld = item.priceOld,
                     Percent = item.saleOff,
                     Installment = item.installment,
-                    ListImage = new List<ListImageModel>()
-                        {
-                            new ListImageModel
-                            {
-                                ImageUrl = item.imageBrand,
-                                ActiveImage = true
-                            },
-                        }
+               
                 });
             }
             #endregion
@@ -305,17 +299,6 @@ namespace BlueSportMVC.Controllers
                     PriceOld = item.priceOld,
                     Percent = item.saleOff,
                     Installment = item.installment,
-                    ListImage = new List<ListImageModel>()
-                        {
-                            new ListImageModel
-                            {
-                                ImageUrl = item.imageBrand,
-                                ImageName = "test",
-                                ActiveImage = true
-
-                            },
-
-                        }
                 });
             }
             #endregion
@@ -523,7 +506,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -557,7 +540,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -591,7 +574,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -625,7 +608,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -664,7 +647,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
 
             });
             data.Add(new Models.ProductModel()
@@ -676,7 +659,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
 
             });
             data.Add(new Models.ProductModel()
@@ -688,7 +671,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -722,7 +705,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -756,7 +739,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -790,7 +773,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -829,7 +812,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
 
             });
             data.Add(new Models.ProductModel()
@@ -841,7 +824,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
 
             });
             data.Add(new Models.ProductModel()
@@ -853,7 +836,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -887,7 +870,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -921,7 +904,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -955,7 +938,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -1006,7 +989,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
 
             });
             data.Add(new Models.ProductModel()
@@ -1018,7 +1001,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -1052,7 +1035,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -1086,7 +1069,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -1120,7 +1103,7 @@ namespace BlueSportMVC.Controllers
                 PriceCurrent = "6.964.000",
                 PriceOld = "8.205.000",
                 Percent = "20",
-                Installment = "Góp 0",
+                Installment = "0",
                 ListImage = new List<ListImageModel>()
                         {
                             new ListImageModel
@@ -1277,7 +1260,7 @@ namespace BlueSportMVC.Controllers
 
             return data;
         }
-        private List<BlueSportMVC.Models.VisitModel> GetVisits()
+        private List<BlueSportMVC.Models.StoreModel> GetStores()
         {
             // to do call api 
 
@@ -1295,18 +1278,16 @@ namespace BlueSportMVC.Controllers
 
             #region Mapping Data DTO => Model 
 
+
+            List<StoreModel> storeModels = new List<StoreModel>();
             foreach (var item in dataDto)
             {
-                data.Add(new Models.VisitModel()
-                {
-                    NameVisit = item.name,
-                    Address = item.address,
-                });
+                storeModels.Add(item.ToGetStore());
             }
             #endregion
 
             #region Data
-            return data;
+            return storeModels;
             #endregion
 
             //var data = new List<Models.VisitModel>();
