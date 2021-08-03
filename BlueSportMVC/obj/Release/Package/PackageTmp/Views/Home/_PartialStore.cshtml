@@ -1,4 +1,4 @@
-﻿@model List<BlueSportMVC.Models.VisitModel>
+﻿@model List<BlueSportMVC.Models.StoreModel>
 
 
 @if (Model != null)
@@ -15,7 +15,7 @@
             @foreach (var item in Model)
             {
                 <a href="#" class="item">
-                    <p class="txt-name">@item.NameVisit</p>
+                    <p class="txt-name">@item.NameStore</p>
                     <div class="txt-address">
                         <p>
                             @item.Address

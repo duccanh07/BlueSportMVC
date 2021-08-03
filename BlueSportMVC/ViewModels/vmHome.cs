@@ -20,8 +20,7 @@ namespace BlueSportMVC.ViewModels
         public List<ListBrandModel> lsBrand { get; internal set; }
         public List<BannerModel> lsBannerFooter { get; internal set; }
         public List<CommitmentModel> lsCommitment { get; set; }
-
-
+        public List<CategoryModel> lsCategory { get; set; }
     }
 
 

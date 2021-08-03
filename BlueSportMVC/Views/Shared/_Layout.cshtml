@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model BlueSportMVC.ViewModels.vmHome
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,7 +16,7 @@
 </head>
 <body>
     <!-- Header-->
-    @Html.Partial("~/Views/Shared/Common/_PartialHeader.cshtml")
+    @Html.Partial("~/Views/Shared/Common/_PartialHeader.cshtml", Model.lsCategory)
     <!-- End Header-->
     <!-- Phan noi dung cua Controller -->
 

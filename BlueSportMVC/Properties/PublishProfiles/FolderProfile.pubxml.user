@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\leduccanh\Desktop\bluesports</_PublishTargetUrl>
-    <History>True|2021-07-31T15:43:50.3582486Z;</History>
+    <History>True|2021-08-02T12:23:11.7843363Z;True|2021-08-02T19:22:43.3062500+07:00;True|2021-07-31T22:43:50.3582486+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,10 +15,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/11/2013 06:29:20</publishTime>
     </File>
     <File Include="bin/BlueSportMVC.dll">
-      <publishTime>07/31/2021 22:43:47</publishTime>
+      <publishTime>08/02/2021 19:22:41</publishTime>
     </File>
     <File Include="bin/BlueSportMVC.pdb">
-      <publishTime>07/31/2021 22:43:47</publishTime>
+      <publishTime>08/02/2021 19:22:41</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/06/2018 06:10:50</publishTime>
@@ -492,7 +492,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/30/2021 09:10:53</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/31/2021 20:42:05</publishTime>
+      <publishTime>08/02/2021 15:00:49</publishTime>
     </File>
     <File Include="Views/Home/_PartialBanner.cshtml">
       <publishTime>07/30/2021 13:47:41</publishTime>
@@ -507,7 +507,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/31/2021 11:49:46</publishTime>
     </File>
     <File Include="Views/Home/_PartialProductAll.cshtml">
-      <publishTime>07/31/2021 20:05:42</publishTime>
+      <publishTime>08/02/2021 12:18:07</publishTime>
     </File>
     <File Include="Views/Home/_PartialProductBicycle.cshtml">
       <publishTime>07/30/2021 14:09:54</publishTime>
@@ -519,10 +519,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/30/2021 14:07:49</publishTime>
     </File>
     <File Include="Views/Home/_PartialProductMale.cshtml">
-      <publishTime>07/30/2021 13:56:51</publishTime>
+      <publishTime>08/02/2021 12:20:08</publishTime>
     </File>
     <File Include="Views/Home/_PartialProductSport.cshtml">
       <publishTime>07/30/2021 17:25:03</publishTime>
+    </File>
+    <File Include="Views/Home/_PartialStore.cshtml">
+      <publishTime>08/02/2021 15:01:10</publishTime>
     </File>
     <File Include="Views/Home/_PartialVisit.cshtml">
       <publishTime>07/30/2021 11:27:08</publishTime>

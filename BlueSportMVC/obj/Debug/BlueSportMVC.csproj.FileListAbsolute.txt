@@ -133,6 +133,7 @@ D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Antlr3.Runtime.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Microsoft.Web.Infrastructure.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Newtonsoft.Json.dll
+D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Helpers.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Mvc.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Optimization.dll
@@ -141,6 +142,7 @@ D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.WebPages.Deployment.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.WebPages.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.WebPages.Razor.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\WebGrease.dll
+D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.xml
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Helpers.xml
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Mvc.xml
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.Optimization.xml
@@ -151,10 +153,8 @@ D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\System.Web.WebPages.Razor.xml
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Newtonsoft.Json.xml
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Antlr3.Runtime.pdb
 D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.AssemblyReference.cache
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.CoreCompileInputs.cache
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.CopyComplete
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.dll
 D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.pdb
-D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.dll
-D:\MWG\src\BlueSportMVC\BlueSportMVC\bin\RestSharp.xml
+D:\MWG\src\BlueSportMVC\BlueSportMVC\obj\Debug\BlueSportMVC.csproj.AssemblyReference.cache

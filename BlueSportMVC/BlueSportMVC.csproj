@@ -128,10 +128,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ModelsDTO\BannerDTO.cs" />
+    <Compile Include="ModelsDTO\CategoryDTO.cs" />
     <Compile Include="ModelsDTO\ProductDTO.cs" />
     <Compile Include="ModelsDTO\StoreDTO.cs" />
     <Compile Include="Models\BannerModel.cs" />
     <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CommitmentModel.cs" />
     <Compile Include="Models\ListBrandModel.cs" />
     <Compile Include="Models\ListImageModel.cs" />
